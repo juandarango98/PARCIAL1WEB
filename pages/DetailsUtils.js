@@ -44,7 +44,7 @@ function DetailsUtils() {
   </head>
     <body>
     <div class = "container">
-    <select class="col-md-6" select-outline" onchange = selectDB() ng-model="selectItem"  id ="selectorDB">` +
+    <select class="select-outline" onchange = selectDB() ng-model="selectItem"  id ="selectorDB">` +
       list +
       `</select>
       <select  onchange = selectCOL() ng-model="selectItem"  id ="selectorCol">

@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+//funciones que conectan la aplicacion con la base de datos para poder hacer las operaciones CRUD
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
 const uri = process.env.MONGOLAB_URI;
@@ -48,6 +49,19 @@ function MongoUtils() {
       });
   };
 
+  mu.deleteDocument = (client, db, col, id, callback) => {
+    col = "" + col;
+    const collection = client.db(db).collection(col);
+    console.log("Getting documents");
+    let resp = collection.deleteOne({ _id: ObjectId(id) }, function(err, res) {
+      if (err) throw err;
+      console.log("1 document deleted");
+      client.close();
+      callback(res);
+    });
+    //retorna una promesa
+  };
+
   mu.addDocument = (client, db, col, body, callback) => {
     console.log(body, "BODY");
 
@@ -61,39 +75,17 @@ function MongoUtils() {
     });
   };
 
-  /*
-  mu.getDocuments = client => {
-    const collectionRestaurant = client.db("web").collection("restaurants");
-    console.log("Getting documents");
-    //retorna una promesa
-    return collectionRestaurant
-      .find({})
-      .toArray()
-      .finally(() => {
-        console.log("closing client");
-        client.close();
-      });
-  };
-  */
-  mu.addRestaurant = (client, body, callback) => {
-    const col = client.db("web").collection("restaurants");
+  mu.updateDoc = (client, bd, col, body, id, callback) => {
+    con = "" + col;
+    const cole = client.db(bd).collection(col);
     console.log(body);
-    let resp = col.insertOne(body, function(err, res) {
-      if (err) throw err;
-      console.log("1 document inserted");
-      client.close();
-    });
-    console.log(resp);
-    callback("OK");
-  };
-  mu.updateRestaurant = (client, body, id, callback) => {
-    const col = client.db("web").collection("restaurants");
-    console.log(body);
-    let resp = col.findOneAndUpdate(
-      { id: id },
-      body,
-      // eslint-disable-next-line no-unused-vars
+
+    console.log(id, col, bd);
+    let resp = cole.findOneAndUpdate(
+      { _id: ObjectId(id) },
+      { $set: body },
       function(err, res) {
+        console.log(id, col, bd);
         if (err) throw err;
         console.log("1 document updated");
         client.close();
@@ -101,62 +93,6 @@ function MongoUtils() {
     );
     console.log(resp);
     callback("OK");
-  };
-  mu.getUsers = (client, callback) => {
-    const col = client.db("web").collection("users");
-    console.log("Getting documents X2");
-    //retorna una promesa
-    col.find({}).toArray((error, data) => {
-      console.log("La lista de usuarios es: ");
-      console.log(data);
-      callback(data);
-    });
-  };
-  mu.addUser = (client, body, callback) => {
-    console.log(body, "BODY");
-    const validar = user => {
-      console.log("USUARIO", user);
-      if (user.length == 0) {
-        const col = client.db("web").collection("users");
-        console.log(body);
-        let resp = col.insertOne(body, function(err, res) {
-          if (err) throw err;
-          console.log("1 document inserted");
-          client.close();
-        });
-        console.log(resp);
-        callback("OK");
-      } else {
-        callback("El usuario ya existe");
-      }
-    };
-    mu.getUser(client, body.username, false).then(usr => validar(usr));
-  };
-  mu.getRestaurant = (client, id) => {
-    const collectionRestaurant = client.db("web").collection("restaurants");
-    console.log("Getting restaurant");
-    //retorna una promesa
-    return collectionRestaurant
-      .find({ _id: ObjectId(id) })
-      .toArray()
-      .finally(() => {
-        console.log("closing client");
-        client.close();
-      });
-  };
-  mu.getUser = (client, id, bool) => {
-    const collectionUser = client.db("web").collection("users");
-    console.log("Getting users");
-    //retorna una promesa
-    return collectionUser
-      .find({ username: id })
-      .toArray()
-      .finally(() => {
-        console.log("closing client");
-        if (bool == true) {
-          client.close();
-        }
-      });
   };
 
   return mu;

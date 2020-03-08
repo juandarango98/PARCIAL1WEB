@@ -27,3 +27,7 @@ The web page is deployed on heroku on this link: https://dbmanagerjda.herokuapp.
 ## License
 
 [MIT License](https://github.com/ValentinaChaconBuitrago/Search_Restaurants/blob/master/LICENSE)
+
+## Creative component
+
+The page refreshes automatically on every action of the user, if a db is chosen or a collection or even if a document is created, the page re-renders automatically, no need for presing OK buttons.

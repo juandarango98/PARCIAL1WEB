@@ -1,0 +1,13 @@
+[{"_id":{"$oid":"5e51ba801c9d4400002dec02"},"name":"La jugueteria","area":"Centro","address":"Calle 27 #4A-03","specialty":"Lunch","type":"Colombian","openingHours":"11:00a.m","closingHours":"9:00p.m","rating":4,"price":4},
+{"_id":{"$oid":"5e51ba961c9d4400002dec03"},"name":"Tratoria Italia Rustica","area":"Usaquen","address":"Calle 119B # 6a -18","specialty":"Dinner","type":"Italian","openingHours":"12:00p.m","closingHours":"10:00p.m","rating":5,"price":2},
+{"_id":{"$oid":"5e51baa41c9d4400002dec04"},"name":"Masa","area":"Usaquen","address":"Calle 105 #18a -68","specialty":"Breakfast","type":"Healthy","openingHours":"7:00a.m","closingHours":"6:00p.m","rating":5,"price":3},
+{"_id":{"$oid":"5e51bab31c9d4400002dec05"},"name":"Sumo Sushi","area":"Chico","address":"Cra 4A # 66-09","specialty":"Dinner","type":"Japanese","openingHours":"2:00p.m","closingHours":"10:00p.m","rating":4,"price":1},
+{"_id":{"$oid":"5e51bac61c9d4400002dec06"},"name":"La taqueria","area":"Parque 93","address":"Calle 93 #11A-11 ","specialty":"Dinner","type":"Mexican","openingHours":"1:00p.m","closingHours":"10:30p.m","rating":3,"price":3},
+{"_id":{"$oid":"5e51baf41c9d4400002dec07"},"name":"Cantina y Punto","area":"Chapinero Alto","address":"Calle 66 #4A-33","specialty":"Dinner","type":"Mexican","openingHours":"12:00p.m","closingHours":"12:00a.m","rating":5,"price":3},
+{"_id":{"$oid":"5e51bb011c9d4400002dec08"},"name":"dos gatos y Simone","area":"Centro","address":"Carrera 2a # 16A-12","specialty":"Lunch","type":"Mexican","openingHours":"11:00a.m","closingHours":"5:00p.m","rating":4,"price":2},
+{"_id":{"$oid":"5e51bb0c1c9d4400002dec09"},"name":"Capitalino Restaurant","area":"Salitre","address":"Calle 24a # 57 - 60 Piso 1","specialty":"Lunch","type":"Colombian","openingHours":"10:00a.m","closingHours":" 10:00p.m","rating":5,"price":3},
+{"_id":{"$oid":"5e51bb171c9d4400002dec0a"},"name":"La Ventana","area":"Chapinero Alto","address":"Carrera 7 #72-41","specialty":"Dinner","type":"Colombian","openingHours":"11:00a.m","closingHours":"11:00p.m","rating":4,"price":4},
+{"_id":{"$oid":"5e51bb501c9d4400002dec0b"},"name":"Al Agua Patos","area":"Usaquen","address":"Calle 104 #18a-52","specialty":"Breakfast","type":"Healthy","openingHours":"8:00a.m","closingHours":"9:00p.m","rating":5,"price":3},
+{"_id":{"$oid":"5e51bb5a1c9d4400002dec0c"},"name":"Holly Cheese","area":"Chapinero Alto","address":"Calle 46 #13-09","specialty":"Breakfast","type":"Healthy","openingHours":"8:00a.m","closingHours":"1:00p.m","rating":5,"price":1},
+{"_id":{"$oid":"5e51bb681c9d4400002dec0d"},"name":"Ushin Japanese Grill","area":"Salitre","address":"Calle 24a #57-60 Piso 14","specialty":"Dinner","type":"Japanese","openingHours":"12:p.m","closingHours":"11:00p.m","rating":5,"price":4}
+]

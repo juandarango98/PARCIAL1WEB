@@ -1,0 +1,1 @@
+mongoexport --host Cluster0-shard-0/cluster0-shard-00-00-wnneh.azure.mongodb.net:27017,cluster0-shard-00-01-wnneh.azure.mongodb.net:27017,cluster0-shard-00-02-wnneh.azure.mongodb.net:27017 --ssl --username prueba --password CLAVE --authenticationDatabase admin --db web --collection restaurants --out restaurants.json

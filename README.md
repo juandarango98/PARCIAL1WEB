@@ -26,8 +26,9 @@ The web page is deployed on heroku on this link: https://dbmanagerjda.herokuapp.
 
 ## License
 
-[MIT License](https://github.com/ValentinaChaconBuitrago/Search_Restaurants/blob/master/LICENSE)
+[MIT License](https://github.com/juandarango98/PARCIAL1WEB/blob/master/LICENSE)
 
 ## Creative component
 
+The page is written almost in a 100% javascript with client side rendering (main.js) and server side rendering (Detailsutils.js), the only pure html page in the start page that has only a button and a label. Because of this, the page changes dinamically based on the choices of the user, and there is only one page were the action occours.
 The page refreshes automatically on every action of the user, if a db is chosen or a collection or even if a document is created, the page re-renders automatically, no need for presing OK buttons.

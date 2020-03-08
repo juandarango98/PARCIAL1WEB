@@ -120,7 +120,7 @@ function createDoc(db, col, keysGlobales) {
       j.setAttribute("class", "form-group");
       let label = document.createElement("label");
       label.setAttribute("for", val);
-      label.innerHTML = val;
+      label.innerHTML = val + ": ";
       let i = document.createElement("input"); //input element, text
       i.setAttribute("type", "text");
       i.setAttribute("id", val);

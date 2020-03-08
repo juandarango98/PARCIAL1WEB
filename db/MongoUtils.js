@@ -6,7 +6,8 @@ function MongoUtils() {
   const mu = {};
 
   mu.connect = () => {
-    //"mongodb+srv://chicho:123@cluster0-6emja.mongodb.net/test?retryWrites=true&w=majority"
+    // const uri =
+    //   "mongodb+srv://chicho:123@cluster0-6emja.mongodb.net/test?retryWrites=true&w=majority";
     const client = new MongoClient(uri, { useNewUrlParser: true });
     console.log("Connecting");
     //retorna una promesa
